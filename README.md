@@ -27,6 +27,10 @@ No HTML comum só permite alterar pelo log
 
 * Estilização com classes e CSS Modules
 
+* Publicando um site com Vercel: https://react.vercel.app/
+
+
+
 
 
 
