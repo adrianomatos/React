@@ -1,5 +1,7 @@
 import MeuComponente from "./components/MeuComponente";
 import MeuBotao from "./components/MeuBotao";
+import MeuContador from "./components/MeuContador";
+
 
 function App() {
   return (
@@ -8,6 +10,9 @@ function App() {
       <MeuComponente />
       <MeuBotao conteudo="Me clique" />
       <MeuBotao conteudo="Outro conteúdo" />
+
+      <h1>Eventos alterando Estados com Hooks</h1>
+      <MeuContador />
     </>
   );
 }
