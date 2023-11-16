@@ -25,6 +25,7 @@ No HTML comum só permite alterar pelo log
 
 * Buscando dados com fetch
 
+* Estilização com classes e CSS Modules
 
 
 

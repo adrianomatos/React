@@ -1,41 +1,19 @@
-import { useEffect, useState } from "react";
-
-const tarefas = [
-  { id: "1", title: "Minha 1 tarefa" },
-  { id: "2", title: "Minha 2 tarefa" },
-  { id: "3", title: "Minha 3 tarefa" },
-  { id: "4", title: "Minha 4 tarefa" },
-];
+import { useState } from "react";
+import "./styles.css";
+import styles from './button.module.css'
 
 export default function App() {
-  const [tarefas, setTarefas] = useState([]);
+  const [contador, setContador] = useState(0); // HOOK
 
-  useEffect(() => {
-    async function buscarDados() {
-      const resultado = await fetch(
-        "https://jsonplaceholder.typicode.com/todos"
-      );
-      const resultadoFinal = await resultado.json();
-      return resultadoFinal;
-    }
-    buscarDados().then((res) => setTarefas(res));
-  }, []);
+  function aumentar() {
+    setContador(contador + 1);
+  }
 
   return (
-    <>
-      <h1>Buscando dados com fetch</h1>
-      <ol>
-        {tarefas.map((tarefa) => {
-          return (
-            <div>
-              <li key={tarefa.id}>
-                {tarefa.title}
-                {tarefa.completed ? " - Concluída" : null}
-              </li>
-            </div>
-          );
-        })}
-      </ol>
-    </>
+    <div className="container">
+      <h1>Meu Contador</h1>
+      {contador}
+      <button className={styles.myButton} onClick={aumentar}>Aumentar</button>
+    </div>
   );
 }
