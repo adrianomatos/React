@@ -1,19 +1,24 @@
-import { useState } from "react";
-import "./styles.css";
-import styles from './button.module.css'
+import MeuComponente from "./components/MeuComponente";
+import MeuBotao from "./components/MeuBotao";
+import MeuContador from "./components/MeuContador";
+import MinhaLista from "./components/MinhaLista";
 
-export default function App() {
-  const [contador, setContador] = useState(0); // HOOK
-
-  function aumentar() {
-    setContador(contador + 1);
-  }
-
+function App() {
   return (
-    <div className="container">
-      <h1>Meu Contador</h1>
-      {contador}
-      <button className={styles.myButton} onClick={aumentar}>Aumentar</button>
-    </div>
+    <>
+      <h1>Components e Props</h1>
+      <MeuComponente />
+      <MeuBotao conteudo="Me clique" />
+      <MeuBotao conteudo="Outro conteúdo" />
+
+      <h1>Eventos alterando Estados com Hooks</h1>
+      <MeuContador />
+
+      <h1>Listas e chaves</h1>
+      <MinhaLista />
+
+    </>
   );
 }
+
+export default App;
