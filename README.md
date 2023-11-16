@@ -23,6 +23,8 @@ No HTML comum só permite alterar pelo log
 
 * Efeitos colaterais
 
+* Buscando dados com fetch
+
 
 
 
